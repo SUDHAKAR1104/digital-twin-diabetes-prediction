@@ -1,311 +1,168 @@
-# 🧬 Healthcare Digital Twin
+# 🩺 Digital Twin for Type 2 Diabetes
 
-## 🚀 Project Overview
+## 📌 Project Overview
 
-A **Healthcare Digital Twin** is a dynamic virtual representation of a person that uses health data to monitor, analyze, and understand changes in an individual's health over time.
+This project develops a Proof-of-Concept (PoC) Digital Twin for Type 2 Diabetes.
 
-Our project aims to build a digital health platform that combines **patient health records, lifestyle information, and real-time health data** to provide a continuous view of an individual's health.
+The system combines historical Electronic Health Record (EHR) data with dynamic wearable and sensor data to create a virtual representation of a patient's health state.
 
-The system is designed to move healthcare from a **reactive approach to a more proactive and personalized approach**.
+The primary goal is to predict the risk of a glucose spike up to 2 hours in advance, enabling a shift from reactive healthcare toward proactive and personalized healthcare.
 
 ---
 
 ## 🎯 Problem Statement
 
-Traditional healthcare often depends on periodic check-ups and historical medical records. This can make it difficult to continuously understand a person's changing health condition.
+Patients with Type 2 Diabetes experience fluctuations in blood glucose levels influenced by factors such as physical activity, sleep, heart rate, lifestyle patterns, and previous glucose measurements.
 
-Our solution addresses this by creating a digital representation of the individual that can continuously incorporate available health data and provide meaningful insights.
+Traditional monitoring primarily identifies abnormal glucose levels after they occur.
 
-### Key Challenges
-
-* Health data is often scattered across different sources.
-* Medical records mainly represent historical information.
-* Continuous health monitoring can be difficult.
-* Identifying changes in health patterns early is challenging.
-* Patients need a simpler way to understand their health data.
+Our Digital Twin aims to continuously analyse patient-specific historical and time-series data to estimate the risk of an upcoming glucose spike before it occurs.
 
 ---
 
-## 💡 Our Solution
+## 💡 Proposed Solution
 
-We propose a **personalized Healthcare Digital Twin** that combines multiple sources of health information.
+The Digital Twin combines two major data streams:
 
-### Data Sources
+### 1. Static / Historical EHR Data
+- Age
+- Demographic information
+- Previous diagnoses
+- HbA1c
+- Historical glucose measurements
+- Relevant medical history
 
-* 🏥 Electronic Health Records (EHR)
-* ❤️ Heart rate
-* 🩺 Blood pressure
-* 🩸 Blood glucose
-* 🫁 SpO₂
-* 🏃 Physical activity
-* 😴 Sleep information
-* 🍎 Lifestyle and dietary information
+### 2. Dynamic / Wearable Data
+- Continuous glucose measurements
+- Heart rate
+- Step count
+- Sleep duration
+- Physical activity
 
-The collected information is processed and represented through a digital twin dashboard.
+These data streams are processed and fused before being provided to a machine-learning model.
 
----
+The final system will generate a prediction such as:
 
-## ⚙️ System Architecture
-
-```text
-             ┌─────────────────────┐
-             │      User/Patient   │
-             └──────────┬──────────┘
-                        │
-                        ▼
-        ┌──────────────────────────────┐
-        │       Health Data Sources    │
-        │                              │
-        │  EHR | Wearables | Lifestyle │
-        └──────────────┬───────────────┘
-                       │
-                       ▼
-        ┌──────────────────────────────┐
-        │       Data Processing        │
-        │                              │
-        │ Cleaning | Integration       │
-        │ Normalization | Validation   │
-        └──────────────┬───────────────┘
-                       │
-                       ▼
-        ┌──────────────────────────────┐
-        │       Digital Twin          │
-        │                              │
-        │ Patient Health Profile       │
-        │ Historical + Current Data    │
-        └──────────────┬───────────────┘
-                       │
-                       ▼
-        ┌──────────────────────────────┐
-        │       AI / Analytics         │
-        │                              │
-        │ Pattern Detection            │
-        │ Risk Indicators              │
-        │ Personalized Insights        │
-        └──────────────┬───────────────┘
-                       │
-                       ▼
-        ┌──────────────────────────────┐
-        │        Dashboard             │
-        │                              │
-        │ Health Trends | Alerts       │
-        │ Insights | Visualization     │
-        └──────────────────────────────┘
-```
+> **Low / Moderate / High risk of a glucose spike within the next 2 hours**
 
 ---
 
-## 🧠 Key Features
+## 🧠 Digital Twin Workflow
 
-### 1. Digital Health Profile
+Patient Data  
+↓  
+EHR Data + Wearable/Sensor Data  
+↓  
+Data Preprocessing  
+↓  
+Feature Engineering & Data Fusion  
+↓  
+AI/ML Prediction Model  
+↓  
+Glucose Spike Risk Prediction  
+↓  
+Digital Twin Dashboard
 
-Creates a centralized representation of the user's health information.
+---
 
-### 2. Real-Time Health Data
+## 🤖 AI / Machine Learning
 
-The system can incorporate continuously generated health information from wearable or IoT devices.
+The project will evaluate suitable machine-learning approaches for short-term glucose risk prediction.
 
-### 3. Health Trend Visualization
+The final model and evaluation metrics will be documented after model training and validation.
 
-Health parameters can be displayed as graphs and trends to make changes easier to understand.
+---
 
-### 4. AI-Based Insights
+## 🖥️ Doctor Dashboard
 
-AI/ML techniques can be used to identify patterns and generate personalized health insights.
+The conceptual dashboard will allow healthcare professionals to:
 
-### 5. Risk Indicators
-
-The system can highlight unusual changes in health parameters for further attention.
-
-### 6. Personalized Monitoring
-
-The Digital Twin is designed around the individual rather than using a one-size-fits-all approach.
+- View the patient's Digital Twin
+- Monitor glucose trends
+- Monitor wearable health parameters
+- View historical health information
+- View predicted glucose-spike risk
+- Understand important factors influencing the prediction
 
 ---
 
 ## 🛠️ Technology Stack
 
-### Frontend
-
-* HTML
-* CSS
-* JavaScript
-* [React / Flutter / Your Technology]
-
-### Backend
-
-* [Python / Node.js / Your Technology]
-
-### Database
-
-* [MySQL / MongoDB / Firebase / Your Database]
-
-### AI / Machine Learning
-
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* [Other ML Technologies]
-
-### Visualization
-
-* [Chart.js / Recharts / Plotly / Your Technology]
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Jupyter Notebook
+- Streamlit
+- Plotly / Matplotlib
+- Git & GitHub
 
 ---
 
-## 📊 Data Flow
+## 📂 Planned Repository Structure
 
-```text
-Health Data
-     ↓
-Data Collection
-     ↓
-Data Cleaning & Processing
-     ↓
-Digital Twin Creation
-     ↓
-AI/ML Analysis
-     ↓
-Health Insights
-     ↓
-Dashboard
-```
+    digital-twin-diabetes-prediction/
+    │
+    ├── data/
+    ├── notebooks/
+    ├── src/
+    ├── models/
+    ├── dashboard/
+    ├── docs/
+    ├── README.md
+    ├── requirements.txt
+    └── LICENSE
 
 ---
 
-## 🔬 Digital Twin Concept
+## 🔒 Data Privacy
 
-The Digital Twin maintains a continuously updated representation of the user's health.
+This Proof-of-Concept will use only synthetic, anonymized, or permitted open-source datasets.
 
-Instead of looking at individual measurements separately, the system attempts to understand the relationship between different health parameters over time.
-
-For example:
-
-```text
-Heart Rate
-     +
-Physical Activity
-     +
-Sleep
-     +
-Blood Pressure
-     +
-Medical History
-     ↓
-Digital Twin
-     ↓
-Health Pattern Analysis
-     ↓
-Personalized Insight
-```
+No personally identifiable patient information is intended to be used in this project.
 
 ---
 
-## 📈 Expected Impact
+## ⚠️ Medical Disclaimer
 
-Our proposed system aims to:
+This project is an educational and research Proof-of-Concept.
 
-* Improve continuous health monitoring.
-* Make health information easier to understand.
-* Identify meaningful changes in health patterns.
-* Support personalized healthcare.
-* Encourage proactive health management.
-* Provide healthcare professionals with a more comprehensive view of patient data.
+It is not a medical device and must not be used for clinical diagnosis, treatment, or medical decision-making.
 
 ---
 
-## 🔐 Privacy & Security
+## 🚧 Project Status
 
-Healthcare data is highly sensitive. The proposed system should follow appropriate privacy and security practices.
+🟡 **Currently Under Development**
 
-Important considerations include:
+Current development stages:
 
-* Secure data storage
-* Authentication and authorization
-* Data encryption
-* Minimal collection of personally identifiable information
-* Controlled access to patient information
-* Appropriate consent for data usage
-
-> This project is a prototype/concept and is not intended to replace professional medical diagnosis or treatment.
-
----
-
-## 🖥️ Project Screenshots
-
-Add screenshots of your application here.
-
-```text
-screenshots/
-├── dashboard.png
-├── health-profile.png
-├── health-trends.png
-└── digital-twin.png
-```
-
----
-
-## 🎥 Demo
-
-**Demo Video:** [Add your YouTube/Drive video link here]
-
-**Live Demo:** [Add your deployment link here]
-
----
-
-## 📁 Project Structure
-
-```text
-Healthcare-Digital-Twin/
-│
-├── frontend/
-├── backend/
-├── models/
-├── data/
-├── screenshots/
-├── README.md
-└── requirements.txt
-```
+- [x] Problem selection
+- [x] GitHub repository creation
+- [ ] Dataset preparation
+- [ ] Data preprocessing
+- [ ] Feature engineering
+- [ ] Model development
+- [ ] Model evaluation
+- [ ] Digital Twin dashboard
+- [ ] Architecture diagram
+- [ ] Final presentation
+- [ ] Prototype demonstration video
 
 ---
 
 ## 👥 Team
+TYST  
+St.Joseph's college of engineering
 
-| Name        | Role                  |
-| ----------- | --------------------- |
-| [Your Name] | Team Lead / Developer |
-| [Member 2]  | [Role]                |
-| [Member 3]  | [Role]                |
-| [Member 4]  | [Role]                |
-
----
-
-## 🏆 Challenge
-
-This project was developed as part of the **Happiest Health Reimagining and Reforming Healthcare in India Summit – 2026 Digital Twin Challenge**.
-
----
-
-## 📌 Future Enhancements
-
-* Integration with real wearable devices
-* Continuous streaming of health data
-* Advanced predictive analytics
-* Personalized health recommendations
-* Integration with additional medical data sources
-* Improved AI/ML models
-* Cloud-based deployment
-* Healthcare professional dashboard
-
----
-
-## ⚠️ Disclaimer
-
-This project is developed for **educational, research, and prototype purposes**. The insights generated by the system should not be considered a medical diagnosis. Users should consult qualified healthcare professionals for medical decisions.
+### Team Members
+- Team Leader — SUDHAKAR T K
+- Member 2 — THARUN BALAJI
+- Member 3 — Thilakan S
+- Member 4 — Yogavel D
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
+Open-source license information will be updated before the final submission.
