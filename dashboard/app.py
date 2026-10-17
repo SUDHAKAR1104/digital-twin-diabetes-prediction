@@ -55,7 +55,7 @@ st.divider()
 st.markdown(
     """
     ### AI-Powered Glucose Spike Risk Prediction
-    Explore predicted risk, understand contributing factors,
+    Explore predicted risk, understandributing factors,
     and compare hypothetical activity and sleep scenarios.
     """
 )
