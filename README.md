@@ -246,16 +246,7 @@ This project is an educational and research Proof-of-Concept. It is **not a medi
 - Per-patient personalisation
 - Clinical validation with healthcare professionals
 
-## 📜 Open-Source License
-
-Released under the **MIT License**. See [LICENSE](LICENSE).
-
-## ✅ Public Accessibility
-
-All files, the demo video (unlisted YouTube) and documents linked here are publicly accessible without additional permissions.
-
-
-## 🚀 Live Dashboard
+  ## 🚀 Live Dashboard
 
 Try the Diabetes Digital Twin Risk Prediction Dashboard here:
 
@@ -266,4 +257,15 @@ Try the Diabetes Digital Twin Risk Prediction Dashboard here:
 - Risk probability visualization
 - Key risk factors explanation
 - What-if analysis
+
+
+## 📜 Open-Source License
+
+Released under the **MIT License**. See [LICENSE](LICENSE).
+
+## ✅ Public Accessibility
+
+All files, the demo video (unlisted YouTube) and documents linked here are publicly accessible without additional permissions.
+
+
 
