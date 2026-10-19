@@ -9,10 +9,10 @@
 | 🎥 **Demo Video (Unlisted YouTube)** | **[PASTE YOUTUBE LINK HERE]** |
 | 🏗️ **Architecture Diagram (PDF)** | [docs/architecture_diagram.pdf](docs/architecture_diagram.pdf) |
 | 📊 **Presentation (PDF)** | [docs/presentation.pdf](docs/presentation.pdf) |
+| 🌐  **Dashboard Link** | https://digital-twin-diabetes-prediction-1-n2tns7guylgumnfvoenvdu.streamlit.app/ |
 | 📜 **License** | [MIT](LICENSE) |
-| 🌐  **Dash Board Link** | https://digital-twin-diabetes-prediction-1-n2tns7guylgumnfvoenvdu.streamlit.app/ |
-
 ---
+
 
 ## 👥 Team Details
 
