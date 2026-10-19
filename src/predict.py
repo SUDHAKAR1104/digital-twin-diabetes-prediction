@@ -1,8 +1,16 @@
 import joblib
 import pandas as pd
 import shap
+from pathlib import Path
 
-saved_data = joblib.load("models/risk_model.pkl")
+ROOT = Path(__file__).resolve().parent.parent
+MODEL_PATH = ROOT / "models" / "risk_model.pkl"
+
+saved_data = joblib.load(MODEL_PATH)
+
+ROOT = Path(__file__).resolve().parent.parent
+MODEL_PATH = ROOT / "models" / "risk_model.pkl"
+saved_data = joblib.load(MODEL_PATH)
 
 
 
