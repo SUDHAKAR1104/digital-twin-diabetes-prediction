@@ -246,7 +246,8 @@ This project is an educational and research Proof-of-Concept. It is **not a medi
 - Per-patient personalisation
 - Clinical validation with healthcare professionals
 
-  ## 🚀 Live Dashboard
+
+## 🚀 Live Dashboard
 
 Try the Diabetes Digital Twin Risk Prediction Dashboard here:
 
