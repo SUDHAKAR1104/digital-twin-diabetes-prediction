@@ -1,23 +1,29 @@
+
 import joblib
 import pandas as pd
 import shap
 from pathlib import Path
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 MODEL_PATH = ROOT / "models" / "risk_model.pkl"
+TRAIN_SCRIPT = ROOT / "src" / "train.py"
+
+# Train the model if it is not available
+if not MODEL_PATH.exists():
+    subprocess.run(
+        [sys.executable, str(TRAIN_SCRIPT)],
+        cwd=str(ROOT),
+        check=True
+    )
 
 saved_data = joblib.load(MODEL_PATH)
-
-ROOT = Path(__file__).resolve().parent.parent
-MODEL_PATH = ROOT / "models" / "risk_model.pkl"
-saved_data = joblib.load(MODEL_PATH)
-
-
 
 model = saved_data["model"]
-
 features = saved_data["features"]
 explainer = shap.TreeExplainer(model)
+
 def predict_risk(patient_data):
     input_df = pd.DataFrame([patient_data], columns=features)
 

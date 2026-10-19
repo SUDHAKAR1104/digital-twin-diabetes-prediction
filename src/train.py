@@ -4,10 +4,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 import joblib
 from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
 
 
 # Load dataset
-df = pd.read_csv("data/synthetic_patients.csv")
+df = pd.read_csv(ROOT / "data" / "synthetic_patients.csv")
 
 # Select input features and target
 features = [
@@ -49,11 +50,12 @@ print("\nClassification Report:")
 print(classification_report(y_test, y_pred, zero_division=0))
 
 # Save model and feature names
-Path("models").mkdir(exist_ok=True)
+MODEL_PATH = ROOT / "models" / "risk_model.pkl"
+MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 joblib.dump(
     {"model": model, "features": features},
-    "models/risk_model.pkl",
+    MODEL_PATH,
 )
 
 print("\nModel saved to models/risk_model.pkl")
