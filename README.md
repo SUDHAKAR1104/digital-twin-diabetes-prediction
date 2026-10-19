@@ -253,3 +253,17 @@ Released under the **MIT License**. See [LICENSE](LICENSE).
 ## ✅ Public Accessibility
 
 All files, the demo video (unlisted YouTube) and documents linked here are publicly accessible without additional permissions.
+
+
+## 🚀 Live Dashboard
+
+Try the Diabetes Digital Twin Risk Prediction Dashboard here:
+
+[**Open Live Dashboard**](https://digital-twin-diabetes-prediction-1-n2tns7guylgumnfvoenvdu.streamlit.app/)
+
+### Features
+- Diabetes risk prediction
+- Risk probability visualization
+- Key risk factors explanation
+- What-if analysis
+
