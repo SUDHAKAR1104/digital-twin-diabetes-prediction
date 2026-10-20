@@ -6,7 +6,7 @@
 
 | | |
 |---|---|
-| 🎥 **Demo Video (Unlisted YouTube)** | **[(https://youtu.be/XmpYSDc23xs)]** |
+| 🎥 **Demo Video (Unlisted YouTube)** | **https://youtu.be/XmpYSDc23xs** |
 | 🏗️ **Architecture Diagram (PDF)** | [docs/architecture_diagram.pdf](docs/architecture_diagram.pdf) |
 | 📊 **Presentation (PDF)** | [docs/presentation.pdf](docs/presentation.pdf) |
 | 🌐  **Dashboard Link** | https://digital-twin-diabetes-prediction-1-n2tns7guylgumnfvoenvdu.streamlit.app/ |
