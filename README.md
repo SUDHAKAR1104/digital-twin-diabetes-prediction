@@ -6,7 +6,7 @@
 
 | | |
 |---|---|
-| 🎥 **Demo Video (Unlisted YouTube)** | **[PASTE YOUTUBE LINK HERE]** |
+| 🎥 **Demo Video (Unlisted YouTube)** | **[(https://youtu.be/XmpYSDc23xs)]** |
 | 🏗️ **Architecture Diagram (PDF)** | [docs/architecture_diagram.pdf](docs/architecture_diagram.pdf) |
 | 📊 **Presentation (PDF)** | [docs/presentation.pdf](docs/presentation.pdf) |
 | 🌐  **Dashboard Link** | https://digital-twin-diabetes-prediction-1-n2tns7guylgumnfvoenvdu.streamlit.app/ |
@@ -185,7 +185,7 @@ Feature importance / SHAP shows the top factors behind each prediction, displaye
 
 ## 🎥 Demo Video
 
-**[PASTE UNLISTED YOUTUBE LINK HERE]**
+**(https://youtu.be/XmpYSDc23xs)**
 
 Covers the problem, data, model, dashboard walkthrough, results and future work.
 
